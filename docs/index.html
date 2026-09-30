@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talentos 50+ | Sua experiência vale muito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F6F0E3; --cream-alt:#ECE2CC; --card:#FFFFFF; --line:#E2D6BC;
+  --green-deep:#2B3620; --green-btn:#33461F; --green-mid:#3F5C2E;
+  --terracotta:#BE5A2E; --terracotta-dark:#9C4A26; --ink:#241D14; --muted:#6E6353;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--terracotta);outline-offset:2px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+.topbar{background:var(--green-deep);color:#EFE9D8;text-align:center;font-size:14px;padding:10px 16px}
+.topbar b{color:#E8A87C}
+
+header{position:sticky;top:0;background:var(--cream);border-bottom:1px solid var(--line);z-index:10}
+nav{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--serif);font-weight:700;font-size:21px;text-decoration:none;color:var(--ink)}
+.brand span{color:var(--green-mid)}
+.navlinks{display:flex;gap:26px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.navlinks a{text-decoration:none;color:var(--ink);font-size:15px;font-weight:500}
+.navlinks a:hover{color:var(--green-mid)}
+.navcta{display:flex;align-items:center;gap:16px}
+.btn{display:inline-block;border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--green-btn);color:#fff}
+.btn-primary:hover{background:var(--green-deep)}
+.btn-outline{background:transparent;border-color:var(--green-btn);color:var(--green-btn)}
+.btn-outline:hover{background:var(--green-btn);color:#fff}
+.btn-accent{background:var(--terracotta);color:#fff}
+.btn-accent:hover{background:var(--terracotta-dark)}
+.btn-dark{background:var(--ink);color:#fff}
+.link-plain{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+
+section{padding:84px 0}
+.alt{background:var(--cream-alt)}
+.dark{background:var(--green-deep);color:#EDE7D6}
+.eyebrow{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:13.5px;color:var(--muted);font-weight:600}
+.dark .eyebrow{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#D9E0CE}
+h1,h2,h3{font-family:var(--serif);margin:0;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+.dark h1,.dark h2,.dark h3{color:#fff}
+h1{font-size:clamp(36px,5.2vw,54px);line-height:1.08;margin:18px 0 20px;max-width:640px}
+h1 em{color:var(--green-mid);font-style:italic}
+h2{font-size:clamp(28px,3.6vw,38px);line-height:1.15;margin-bottom:10px}
+.section-head{max-width:620px;margin-bottom:44px}
+.section-head p{color:var(--muted);font-size:18px;margin:10px 0 0}
+.dark .section-head p{color:#C7CDB8}
+p.lead{font-size:19px;color:var(--muted);max-width:500px}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.capture{display:flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;max-width:420px;box-shadow:0 10px 24px -16px rgba(43,54,32,.4);margin:26px 0 14px}
+.capture input{flex:1;border:none;background:transparent;padding:12px 16px;font-size:15px;font-family:inherit;color:var(--ink)}
+.capture input:focus{outline:none}
+.capture button{width:42px;height:42px;border-radius:50%;background:var(--green-btn);color:#fff;border:none;font-size:18px;cursor:pointer;flex-shrink:0}
+.capture button:hover{background:var(--green-deep)}
+.fine{font-size:13px;color:var(--muted)}
+.hero-visual{position:relative}
+.hero-photo{background:linear-gradient(135deg,#DCE4CB,#EFE7D0);border-radius:22px;aspect-ratio:4/5;border:1px solid var(--line);position:relative;overflow:hidden;box-shadow:0 24px 50px -26px rgba(43,54,32,.45)}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo .initials{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:120px;color:rgba(43,54,32,.14);font-weight:700}
+.chip{position:absolute;background:var(--ink);color:#fff;border-radius:12px;padding:10px 14px;font-size:13px;display:flex;align-items:center;gap:8px;box-shadow:0 10px 22px -10px rgba(0,0,0,.4)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:#8FBF6B}
+.chip.c1{top:14%;left:8%}
+.chip.c2{top:44%;right:6%}
+.chip.c3{bottom:10%;left:14%}
+
+/* STATEMENT BAND */
+.statement{max-width:820px}
+.statement h2{font-size:clamp(30px,4.4vw,46px);line-height:1.2}
+.statement .hl{color:#E8A87C}
+.statement p{color:#C7CDB8;font-size:18px;max-width:600px;margin-top:18px}
+
+/* 3-COL FEATURES */
+.feat3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+.feat-ico{width:44px;height:44px;border-radius:12px;background:var(--cream-alt);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--green-mid)}
+.ico{width:20px;height:20px;display:block}
+.chipflat .ico{color:var(--terracotta)}
+.tcard .panel .ico{color:var(--green-mid)}
+.feat3 h3{font-size:19px;margin-bottom:8px}
+.feat3 p{color:var(--muted);font-size:15px;margin:0}
+
+.duo{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin:44px 0;align-items:start}
+.duo-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;position:relative;min-height:320px}
+.mock-phone{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+.gauge{position:relative;width:160px;height:160px}
+.gauge svg{transform:rotate(-90deg)}
+.gauge .val{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.gauge .val b{font-family:var(--serif);font-size:34px;color:var(--green-deep)}
+.gauge .val span{font-size:12px;color:var(--muted)}
+.mock-phone h3{font-size:16px;margin-top:4px}
+.mock-phone p{font-size:13.5px;color:var(--muted);text-align:center;margin:0}
+
+.badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.badge{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:12px 18px;font-size:13.5px;color:var(--muted);font-weight:600}
+.badge b{color:var(--ink);display:block;font-family:var(--serif);font-size:15px;font-weight:700}
+
+/* CAROUSEL */
+.carousel-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;gap:20px;flex-wrap:wrap}
+.arrows{display:flex;gap:10px}
+.arrow{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--terracotta);background:transparent;color:var(--terracotta);font-size:18px;cursor:pointer}
+.arrow:hover{background:var(--terracotta);color:#fff}
+.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.tcard{scroll-snap-align:start;flex:0 0 300px;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.tcard .panel{height:170px;background:linear-gradient(135deg,var(--cream-alt),#fff);display:flex;align-items:center;justify-content:center;font-size:40px}
+.tcard .body{padding:20px}
+.tcard h3{font-size:17px;margin-bottom:8px}
+.tcard p{font-size:14px;color:var(--muted);margin:0}
+
+/* STATS BLOCKS */
+.stat-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sblock{background:var(--green-deep);color:#fff;border-radius:18px;padding:30px 26px;min-height:150px;display:flex;flex-direction:column;justify-content:flex-end}
+.sblock b{font-family:var(--serif);font-size:clamp(30px,4vw,42px);line-height:1;display:block}
+.sblock span{font-size:14.5px;margin-top:10px;opacity:.95}
+.stat-note{color:var(--muted);font-size:14px;margin-top:18px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.profile-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
+.profile-card .tag{display:inline-block;background:var(--cream-alt);color:var(--green-deep);border-radius:999px;padding:4px 14px;font-size:13.5px;font-weight:700;margin-bottom:14px}
+.profile-card h3{font-size:21px;margin-bottom:8px}
+.profile-card p{color:var(--muted);margin:0}
+
+.chips-row{display:flex;flex-wrap:wrap;gap:12px}
+.chipflat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 20px;font-size:15px;display:flex;gap:10px;align-items:center}
+
+.team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.team-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+.avatar{width:52px;height:52px;border-radius:50%;color:#fff;font-family:var(--serif);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.team-card h3{font-size:19px;margin-bottom:4px}
+.team-card .role{color:var(--terracotta);font-weight:700;font-size:14px;margin-bottom:10px}
+.team-card p{color:var(--muted);font-size:14.5px;margin:0}
+
+/* FINAL CTA */
+.final{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.final h2{font-size:clamp(30px,4vw,42px)}
+.final p{color:#C7CDB8;max-width:460px;margin:14px 0 26px}
+.final-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:28px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.final-visual .gauge .val b{color:#fff}
+.final-visual .gauge .val span{color:#C7CDB8}
+.final-visual p{color:#EDE7D6;font-size:14px;text-align:center;margin:0}
+
+footer{background:var(--ink);color:#B9AE95;padding:0}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding:56px 0 36px}
+.foot-brand{font-family:var(--serif);color:#fff;font-size:20px;margin-bottom:10px;font-weight:700}
+.foot-top h4{color:#fff;font-size:14.5px;margin:0 0 14px}
+.foot-top ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:14.5px}
+.foot-newsletter{background:#33291B;border-radius:18px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin:0 0 44px}
+.foot-newsletter h3{color:#fff;font-size:20px}
+.foot-newsletter .capture{margin:0;background:#241C12;border:1px solid #4A3E29}
+.foot-newsletter .capture input{color:#fff}
+.foot-newsletter .capture input::placeholder{color:#8A7E68}
+.foot-bottom{border-top:1px solid #3A3122;padding:22px 0;font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media (max-width:1060px){
+  .team{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .hero,.duo,.final,.two,.feat3,.team,.stat-blocks{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr 1fr}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Projeto acadêmico em andamento · <b>Apresentação da Avaliação Inicial em 09/10/2026</b></div>
+
+<header>
+  <div class="wrap"><nav>
+    <a class="brand" href="#topo">Talentos <span>50+</span></a>
+    <ul class="navlinks">
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#publico">Público-alvo</a></li>
+      <li><a href="#governanca">Governança</a></li>
+      <li><a href="#equipe">Equipe</a></li>
+    </ul>
+    <div class="navcta">
+      <a class="link-plain" href="#topo">Entrar</a>
+      <a class="btn btn-primary" href="#como-funciona">Cadastrar-se</a>
+    </div>
+  </nav></div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section>
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Para quem tem 50 anos ou mais</span>
+        <h1>Sua experiência vale muito. Compartilhe-a.</h1>
+        <p class="lead">O Talentos 50+ conecta prestadores 50+ e quem procura seus serviços em Aracaju. Publique o que você sabe fazer com ajuda de uma inteligência artificial e seja encontrado por quem precisa.</p>
+        <form class="capture" onsubmit="return false">
+          <input type="email" placeholder="Seu e-mail para saber do lançamento" aria-label="E-mail">
+          <button type="submit" aria-label="Enviar">→</button>
+        </form>
+        <span class="fine">Projeto em desenvolvimento · sem custo, sem anúncios</span>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo">
+          <img src="images/antonio.jpg" alt="Seu Antônio Ferreira, eletricista" onerror="this.style.display='none'">
+          <div class="initials">AF</div>
+          <div class="chip c1"><span class="dot"></span>Categoria: Reparos</div>
+          <div class="chip c2"><span class="dot"></span>Município: Aracaju</div>
+          <div class="chip c3"><span class="dot"></span>Contato autorizado</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="dark">
+    <div class="wrap">
+      <div class="statement">
+        <h2>A experiência de quem tem <span class="hl">50 anos ou mais</span> está sendo desperdiçada.</h2>
+        <p>São pessoas com décadas de ofício, mas poucos canais simples para transformar isso em oportunidade. Plataformas genéricas não foram feitas para esse público nem para o comércio local.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES + DUO -->
+  <section id="como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">O que o Talentos 50+ resolve</span>
+        <h2 style="margin-top:14px">Devolvemos visibilidade a quem tem experiência</h2>
+      </div>
+      <div class="feat3">
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Publique com facilidade</h3><p>Descreva o que você faz com suas palavras. A IA sugere título, descrição e categoria em segundos.</p></div>
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Seja encontrado</h3><p>Quem procura filtra por categoria e município e chega direto até você, sem intermediários.</p></div>
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>Continue no controle</h3><p>Você decide o que mostrar. Contato só aparece se autorizado; endereço nunca é exibido.</p></div>
+      </div>
+
+      <div class="duo">
+        <div class="duo-card hero-photo" style="border-radius:20px">
+          <img src="images/marta.jpg" alt="Dona Marta Souza, costureira" onerror="this.style.display='none'">
+          <div class="initials">MS</div>
+          <div class="chip c1"><span class="dot"></span>Dona Marta Souza, 58</div>
+          <div class="chip c2"><span class="dot"></span>Costureira · Aracaju</div>
+        </div>
+        <div class="mock-phone">
+          <div class="gauge">
+            <svg width="160" height="160"><circle cx="80" cy="80" r="68" stroke="#E2D6BC" stroke-width="14" fill="none"/><circle cx="80" cy="80" r="68" stroke="#3F5C2E" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="427" stroke-dashoffset="90"/></svg>
+            <div class="val"><b>82%</b><span>perfil pronto</span></div>
+          </div>
+          <h3>Perfil quase completo</h3>
+          <p>Falta só confirmar o contato para publicar o anúncio.</p>
+        </div>
+      </div>
+
+      <div class="badges">
+        <div class="badge"><b>UNINASSAU</b>Aracaju</div>
+        <div class="badge"><b>Edital nº 02/2026</b>MVP Tópicos Integradores</div>
+        <div class="badge"><b>LGPD</b>Dados minimizados e consentidos</div>
+        <div class="badge"><b>Piloto</b>Aracaju / SE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAROUSEL: como funciona (passo a passo) -->
+  <section class="alt">
+    <div class="wrap">
+      <div class="carousel-head">
+        <div>
+          <span class="eyebrow">Passo a passo</span>
+          <h2 style="margin-top:14px">Do relato ao anúncio publicado</h2>
+        </div>
+        <div class="arrows">
+          <button class="arrow" onclick="document.getElementById('steps-track').scrollBy({left:-320,behavior:'smooth'})" aria-label="Anterior">‹</button>
+          <button class="arrow" onclick="document.getElementById('steps-track').scrollBy({left:320,behavior:'smooth'})" aria-label="Próximo">›</button>
+        </div>
+      </div>
+      <div class="track" id="steps-track">
+        <div class="tcard"><div class="panel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-4.3 4-6 7-6s5.6 1.7 7 6"/></svg></div><div class="body"><h3>1. Crie seu perfil</h3><p>Nome público, município e uma breve apresentação. Você decide o que mostrar.</p></div></div>
+        <div class="tcard"><div class="panel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><path d="M4.5 5.5h15a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4.5 3.5v-3.5h-1a1 1 0 0 1-1-1v-9a1 1 0 0 1 1.5-1Z"/><circle cx="9" cy="11" r=".9" fill="currentColor" stroke="none"/><circle cx="12.5" cy="11" r=".9" fill="currentColor" stroke="none"/><circle cx="16" cy="11" r=".9" fill="currentColor" stroke="none"/></svg></div><div class="body"><h3>2. Descreva com a IA</h3><p>Conte o que você faz com suas palavras; a IA sugere título, texto e categoria.</p></div></div>
+        <div class="tcard"><div class="panel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.7 2.7L16.5 9"/></svg></div><div class="body"><h3>3. Revise e publique</h3><p>Edite o que quiser e confirme. Nada é publicado sem a sua aprovação.</p></div></div>
+        <div class="tcard"><div class="panel"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="40" height="40"><path d="M12 22s7-7.8 7-12.5A7 7 0 1 0 5 9.5C5 14.2 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.4"/></svg></div><div class="body"><h3>4. Seja encontrado</h3><p>Quem busca filtra por categoria e município e fala direto com você.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Sergipe está envelhecendo</span>
+        <h2 style="margin-top:14px">Por que Aracaju é a área piloto</h2>
+      </div>
+      <div class="stat-blocks">
+        <div class="sblock"><b>294.609</b><span>pessoas com 60+ em Sergipe, 13,3% da população</span></div>
+        <div class="sblock"><b>90.134</b><span>estão em Aracaju, cerca de 1/3 do estado</span></div>
+        <div class="sblock"><b>+58,4%</b><span>de crescimento dessa população entre 2010 e 2022</span></div>
+      </div>
+      <p class="stat-note">Fonte: IBGE, Censo Demográfico 2022 (via Observatório de Sergipe). O recorte divulgado é 60+; o público 50+ é ainda maior.</p>
+    </div>
+  </section>
+
+  <!-- PÚBLICO-ALVO -->
+  <section class="alt" id="publico">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Público-alvo</span>
+        <h2 style="margin-top:14px">Feito para dois tipos de pessoa</h2>
+      </div>
+      <div class="two">
+        <div class="profile-card">
+          <span class="tag">Quem oferece</span>
+          <h3>Prestadores com 50 anos ou mais</h3>
+          <p>Moradores de Aracaju que querem divulgar um serviço ou saber, complementar a renda, manter-se ativos e ser reconhecidos pela experiência que têm.</p>
+        </div>
+        <div class="profile-card">
+          <span class="tag">Quem procura</span>
+          <h3>Clientes de qualquer idade</h3>
+          <p>Pessoas que buscam um profissional experiente, próximo de casa, e preferem falar direto com quem presta o serviço.</p>
+        </div>
+      </div>
+      <div class="chips-row" style="margin-top:24px">
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M20.5 7.3a4.3 4.3 0 0 1-5.8 4.9L7.4 19.5l-2.9-2.9 7.3-7.3a4.3 4.3 0 0 1 4.9-5.8l-2.8 2.8 1.6 1.6Z"/></svg> Reparos</div>
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4.5 19.5 16 8"/><circle cx="17.8" cy="6.2" r="2.1"/><path d="M12.5 11.5c-1.2 1.2-1.2 3 0 4.2"/></svg> Artesanato e costura</div>
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 21V11"/><path d="M12 11C7 11 5 7 5 5c4 0 7 2 7 6Z"/><path d="M12 14c0-4 3-6 7-6 0 3-2 6-7 6Z"/></svg> Jardim</div>
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M3.5 11h14a4 4 0 0 1-4 4H7.5a4 4 0 0 1-4-4Z"/><path d="M17.5 9h3"/><path d="M8 6.3 9 4.5M12 6.3V4.3"/></svg> Culinária</div>
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4.5 5.8A2.3 2.3 0 0 1 6.8 3.5H19.5v14.7H6.8a2.3 2.3 0 0 0-2.3 2.3Z"/><path d="M4.5 5.8v14.7"/></svg> Aulas particulares</div>
+        <div class="chipflat"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="8"/><path d="M9.7 9.7c0-1 1-1.7 2.3-1.7s2.3.7 2.3 1.7c0 2.1-4.6 1.5-4.6 3.6 0 1 1 1.7 2.3 1.7s2.3-.6 2.3-1.7"/><path d="M12 6.7v1M12 15.6v1"/></svg> Consultoria</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANÇA -->
+  <section id="governanca">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Governança</span>
+        <h2 style="margin-top:14px">Como o projeto é organizado</h2>
+      </div>
+      <div class="feat3">
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg></div><h3>Rastreabilidade</h3><p>GitHub com branch protegida, pull requests e Kanban com tarefas por responsável.</p></div>
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".6" fill="currentColor" stroke="none"/></svg></div><h3>Escopo controlado</h3><p>O roadmap é um compromisso. Item novo só entra se outro de esforço equivalente sair.</p></div>
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 5 3.3 7.7 7.5 9 4.2-1.3 7.5-4 7.5-9V6Z"/></svg></div><h3>Privacidade</h3><p>Contato só com consentimento; endereço residencial nunca é exibido.</p></div>
+      </div>
+      <div class="feat3" style="margin-top:28px">
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="10" rx="2.5"/><circle cx="9" cy="13" r="1.1" fill="currentColor" stroke="none"/><circle cx="15" cy="13" r="1.1" fill="currentColor" stroke="none"/><path d="M12 8V5"/><circle cx="12" cy="4" r="1" fill="currentColor" stroke="none"/></svg></div><h3>IA responsável</h3><p>Ela apenas sugere; a pessoa sempre revisa e confirma antes de publicar.</p></div>
+        <div><div class="feat-ico"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4"/><path d="M9.5 13h5M9.5 17h5"/></svg></div><h3>Conduta e autoria</h3><p>Conteúdo original, licenças respeitadas, conforme o edital do MVP.</p></div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPE -->
+  <section class="alt" id="equipe">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Líderes do projeto</span>
+        <h2 style="margin-top:14px">Quem está por trás do Talentos 50+</h2>
+      </div>
+      <div class="team">
+        <div class="team-card"><div class="avatar" style="background:var(--green-mid)"><img src="images/bernardo.jpg" alt="Bernardo Lima" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()"><span>BL</span></div><h3>Bernardo Lima</h3><div class="role">Líder e desenvolvimento</div><p>Back-end, Web, Mobile e integração da inteligência artificial.</p></div>
+        <div class="team-card"><div class="avatar" style="background:var(--terracotta)"><img src="images/nilton.jpg" alt="Nilton Rodrigues" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()"><span>NR</span></div><h3>Nilton Rodrigues</h3><div class="role">Pesquisa e viabilidade</div><p>Pesquisa de campo, estudo de mercado e revisão do roadmap.</p></div>
+        <div class="team-card"><div class="avatar" style="background:var(--green-mid)"><img src="images/lucas.jpg" alt="Lucas Eduardo" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()"><span>LE</span></div><h3>Lucas Eduardo</h3><div class="role">Conteúdo e usabilidade</div><p>Landing page, protótipos de tela e testes com o público 50+.</p></div>
+        <div class="team-card"><div class="avatar" style="background:var(--terracotta)"><img src="images/joao.jpg" alt="João Gabriel" onload="this.nextElementSibling.style.display='none'" onerror="this.remove()"><span>JG</span></div><h3>João Gabriel</h3><div class="role">Documentação e UX</div><p>Documentação do projeto, experiência do usuário e revisão geral.</p></div>
+      </div>
+      <p class="stat-note">Orientação acadêmica: Prof. Marcos Cesar · UNINASSAU Aracaju, Análise e Desenvolvimento de Sistemas.</p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="dark">
+    <div class="wrap final">
+      <div>
+        <span class="eyebrow">Em desenvolvimento</span>
+        <h2 style="margin-top:14px">Sua experiência não deveria ficar invisível.</h2>
+        <p>Acompanhe o Talentos 50+ enquanto construímos, passo a passo, uma vitrine para quem tem 50 anos ou mais em Aracaju.</p>
+        <form class="capture" onsubmit="return false">
+          <input type="email" placeholder="Seu e-mail" aria-label="E-mail">
+          <button type="submit" aria-label="Enviar">→</button>
+        </form>
+      </div>
+      <div class="final-visual">
+        <div class="gauge">
+          <svg width="150" height="150"><circle cx="75" cy="75" r="64" stroke="rgba(255,255,255,.15)" stroke-width="13" fill="none"/><circle cx="75" cy="75" r="64" stroke="#BE5A2E" stroke-width="13" fill="none" stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="260"/></svg>
+          <div class="val"><b>35%</b><span style="color:#C7CDB8">do roadmap</span></div>
+        </div>
+        <p>Release 1 em desenvolvimento · previsão de conclusão em 25/10/2026</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-newsletter">
+      <div>
+        <h3>Acompanhe o lançamento</h3>
+        <span class="fine" style="color:#8A7E68">Sem spam. Só novidades do projeto.</span>
+      </div>
+      <form class="capture" onsubmit="return false" style="min-width:280px">
+        <input type="email" placeholder="Seu e-mail" aria-label="E-mail">
+        <button type="submit" aria-label="Enviar">→</button>
+      </form>
+    </div>
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">Talentos 50+</div>
+        <p style="max-width:260px;font-size:14.5px">Uma plataforma para pessoas com 50 anos ou mais oferecerem e encontrarem serviços em Aracaju.</p>
+      </div>
+      <div><h4>Plataforma</h4><ul><li><a class="link-plain" style="color:inherit" href="#como-funciona">Como funciona</a></li><li><a class="link-plain" style="color:inherit" href="#publico">Público-alvo</a></li></ul></div>
+      <div><h4>Projeto</h4><ul><li><a class="link-plain" style="color:inherit" href="#governanca">Governança</a></li><li><a class="link-plain" style="color:inherit" href="#equipe">Equipe</a></li></ul></div>
+      <div><h4>Sobre</h4><ul><li>UNINASSAU Aracaju</li><li>Edital nº 02/2026</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Talentos 50+ · Projeto acadêmico</span>
+      <span>1º MVP Tópicos Integradores – Silver Economy</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
